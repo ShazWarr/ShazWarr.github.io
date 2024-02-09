@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flexbox Fun</title>
+<link rel="stylesheet" href="style.css">
 <style>
+
   /* Additional styles for fun */
   .red { background: tomato; }
   .blue { background: dodgerblue; }
@@ -17,11 +19,24 @@
 <body>
     <header>
         <h1>FlexBox practice</h1>
+        <nav>
+            <div class="logo"><p>logo</p></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section class="flex-container">
             <div class="flex-item red" style="width: 100px; height: 100px; color: white; font-size: 2em;">1</div>
+            <div class="flex-item blue">1</div>
+            <div class="flex-item green">1</div>
+            <div class="flex-item orange">1</div>
+            <div class="flex-item purple">1</div>
 
         </section>
     </main>

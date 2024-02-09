@@ -1,0 +1,128 @@
+body{
+    background-color: salmon;
+}
+.flex-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: space-around;
+    background-color: lightgray;
+    margin: 10%;
+}
+
+.flex-item {
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    margin: 10px; 
+}
+
+nav {
+    display: flex; /* use flexbox for layout */
+    justify-content: space-between; /* sapce items evenly */
+    align-items: center; /* center items vertically */
+    animation: backgroundColor 5s infinite;
+}
+
+.logo {
+    font-size: 24px; /* adjust font size */
+    font-weight: bold; /* make the logo text bold */
+    color: white;
+    animation: backgroundColor 5s infinite;
+}
+
+ul {
+    list-style-type: none; /* take stupid list dots out */
+    padding: 0; /* remove default padding */
+    margin: 0; /* remove default margin */
+    display: flex; /* use flexbox for layout */
+    position: relative; /*uses relative to move the li elements*/
+    right: 45%; /* moves the nav part li's to the center*/
+}
+
+li {
+    margin: 10px; /* add spacing between navigation links */
+    
+}
+
+li a{
+    text-decoration: none;
+    color: whitesmoke;
+    
+
+}
+
+li>a:hover{
+    color:#DFD630;;/*awesome mustard hover color*/
+    transition: color 1s;
+   
+}
+
+/*awesome background hover animation*/
+@keyframes backgroundColor {
+    0%{
+        background-color: chocolate;
+
+    }
+   
+    50%{ background-color: dodgerblue;
+
+    }
+
+    100%{
+        background-color: lightpink;
+
+    }
+    
+}
+
+@media (min-width: 600px){
+    .flex-container{
+        justify-content: center;
+    }
+    .flex-item{
+        color: grey; 
+    }
+}
+
+@media (min-width: 900px){
+    .flex-container{
+        justify-content: center;
+    }
+    .flex-item{
+        color: purple; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* adjust for smaller screens */
+    .flex-container {
+      justify-content: center; /* center items horizontally */
+    }
+  
+    nav {
+      flex-direction: column; /* stack items vertically */
+      align-items: center; /* center items horizontally */
+    }
+  
+    .logo {
+      margin-bottom: 10px; /* add space below the logo */
+    }
+  
+    ul {
+      flex-direction: column; /* stack items vertically */
+      text-align: center; /* center text horizontally */
+    }
+  
+    li {
+      margin: 5px 0; /* reduce vertical margin between navigation links */
+    }
+  }
+
+
